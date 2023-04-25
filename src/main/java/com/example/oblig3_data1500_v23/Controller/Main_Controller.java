@@ -1,5 +1,8 @@
 package com.example.oblig3_data1500_v23.Controller;
 
+import com.example.oblig3_data1500_v23.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,4 +28,6 @@ public class Main_Controller {
     public void delete() {
         ticketOrder.clear();
     }
+    @Autowired
+    OrderRepository orderRepository;
     }
